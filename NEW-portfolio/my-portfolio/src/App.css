@@ -1,0 +1,10 @@
+#root {
+  margin: 0 auto;
+  width:100%;
+}
+
+.main-bg{
+  background-image: url(/my-portfolio/src/assets/doted-bg.png);
+  background-position: center center;
+  background-size: cover;
+}
