@@ -21,7 +21,7 @@ const ProjectList = () => {
   return (
     <div className="max-w-3xl">
       <h1 className="text-6xl font-bold">Projets</h1>
-      <div className='py-5 grid grid-cols-1 sm:grid-cols-2 gap-4'>
+      <div className=''>
 
         <ProjectItem />
         <ProjectItem />

@@ -4,15 +4,17 @@ import Profile from "../assets/imageprofile.png";
 
 const ProfileHeading = () => {
   return (
-    <motion.div className="flex gap-6 items-center">
-        <img className="h-32 w-32 rounded-full" src={Profile} alt="" />
+    <motion.div className="flex flex-wrap-reverse md:flex-nowrap gap-7 items-center">
+        
 
-        <div>
-          <p className="text-4xl mb-3 font-bold">Alexander w. koum</p>
-          <h1 className="heading-4">
-            Architecte Web Innovant 🖥️ | Spécialiste Salesforce Admin 🛠️
+        <div className="flex flex-col gap-9">
+          <p className="text-lg mb-3 font-bold py-2 mb-4 px-5 rounded-full py-2 border px-5 bg-sky-950 border-sky-900 w-full md:w-[27%]">Alexander w. koum 🤙</p>
+          <p className="text-6xl md:text-9xl mb-3 font-bold">Developpeur Front-end.</p>
+          <h1 className="text-md font-thin">
+          Je conçois des interfaces web modernes et intuitives pour une expérience utilisateur optimale.
           </h1>
         </div>
+        <img className="h-48 w-48 md:h-64 md:w-64 rounded-full ring" src={Profile} alt="" />
       </motion.div>
   )
 }

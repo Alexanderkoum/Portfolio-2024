@@ -6,8 +6,8 @@ import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 
 const variants = {
-  open: { opacity:1, y: 0 },
-  closed: { opacity:0, y: "100%" },
+  open: { opacity:1, x: 0 },
+  closed: { opacity:0, x: "100%" },
 };
 
 const FormulaireContact = () => {
@@ -34,7 +34,7 @@ const FormulaireContact = () => {
   };
   return (
     <motion.div
-    className="absolute bottom-6 right-[-100px] max-w-3xl w-[300px] sm:w-[500px] z-10">
+    className="absolute bottom-6 right-[-100px] w-screen h-screen z-80">
       <motion.form
         ref={form}
         onSubmit={sendEmail}
@@ -42,7 +42,7 @@ const FormulaireContact = () => {
         action=""
         method="post"
       >
-        <h2 className="text-4xl mb-3 font-bold">Parlons-en !!</h2>
+        <h2 className="text-4xl mb-3 font-bold">Parlons-en !!!</h2>
         <input
           className="rounded-xl p-4 bg-neutral-400/30"
           type="text"

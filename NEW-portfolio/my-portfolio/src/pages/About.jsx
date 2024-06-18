@@ -8,7 +8,7 @@ import AnimProfile from "../assets/room-coding.png";
 const About = () => {
   return (
     <motion.div
-      className="max-w-3xl"
+      className="max-w-4xl"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
@@ -17,10 +17,10 @@ const About = () => {
         ease: [0, 0.71, 0.2, 1.01],
       }}
     >
-      <ProfileHeading />
+      <h1 className="text-6xl font-bold  decoration-sky-500 underline-offset-8 mb-16">Plus sur moi...</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <div className="my-9 p-9 border-none rounded-xl bg-neutral-900">
+          <div className="my-9 p-9 border-none rounded-xl bg-slate-900">
             <h2 className="text-2xl font-bold underline decoration-sky-500 underline-offset-8 mb-5">
               Experience
             </h2>
@@ -37,13 +37,13 @@ const About = () => {
           </div>
         </div>
         <div>
-          <div className="my-9 p-9 border-none rounded-xl bg-neutral-900 flex items-center justify-center">
-          <img src={AnimProfile} alt="3d profile" className="h-[23rem]" />
+          <div className="my-9 p-9 border-none rounded-xl bg-slate-900 flex items-center justify-center">
+          <img src={AnimProfile} alt="3d profile" className="h-[18.3rem]" />
           </div>
           
         </div>
       </div>
-      <div className="my-9 p-9 border-none rounded-xl bg-neutral-900">
+      <div className="my-9 p-9 border-none rounded-xl bg-slate-900">
         <h2 className="text-2xl font-bold underline decoration-sky-500 underline-offset-8 mb-5">
           Experience
         </h2>
@@ -58,11 +58,11 @@ const About = () => {
         </p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div className="my-9 p-9 border-none rounded-xl bg-neutral-900">
+        <div className="my-9 p-9 border-none rounded-xl bg-slate-900">
           <p className="text-[8rem] font-bold text-violet-500">4+</p>
           <p>Annees d'experience</p>
         </div>
-        <div className="my-9 p-9 border-none rounded-xl bg-neutral-900">
+        <div className="my-9 p-9 border-none rounded-xl bg-slate-900">
           <p className="text-[8rem] font-bold text-fuchsia-500">100+</p>
           <p>Site web realise*</p>
         </div>
@@ -72,7 +72,7 @@ const About = () => {
         <span className="text-pink-500">Shortkut</span>, ces projets ne figure
         pas dans ce portfolio.
       </p>
-      <div className="my-9 p-9 border-none rounded-xl bg-neutral-950 ring ring-fuchsia-500">
+      <div className="my-9 p-9 border-none rounded-xl bg-slate-950 ring ring-fuchsia-500">
         <h2 className="text-2xl font-bold underline decoration-indigo-500 underline-offset-8 mb-5">
           Stacks i Know
         </h2>
@@ -89,7 +89,7 @@ const About = () => {
           <SoftwareItem children="PYTHON" />
         </div>
       </div>
-      <div className="my-9 p-9 border-none rounded-xl bg-neutral-900">
+      <div className="my-9 p-9 border-none rounded-xl bg-slate-900">
         <h2 className="text-2xl font-bold underline decoration-sky-500 underline-offset-8 mb-5">
           Education
         </h2>
@@ -103,7 +103,7 @@ const About = () => {
           nihil aspernatur accusantium nemo molestiae voluptate!
         </p>
       </div>
-      <div className="my-9 p-9 border-none rounded-xl bg-neutral-900">
+      <div className="my-9 p-9 border-none rounded-xl bg-slate-900">
         <h2 className="text-2xl font-bold underline decoration-pink-500 underline-offset-8 mb-5">
           Hobbies
         </h2>
