@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 const ProjectItem = () => {
   return (
     <motion.div
-  className="max-w-6xl"
+  className="max-w-6xl hover:backdrop-blur-xl"
   initial={{ opacity: 0, y: 100 }}
   whileInView={{ opacity: 1, y: 0 }}
   transition={{
@@ -20,7 +20,7 @@ const ProjectItem = () => {
   }}
 >
     <div className="flex flex-wrap md:flex-nowrap gap-12 py-5 border-solid border-t border-slate-800">
-        <div className="w-full md:w-2/12 "><p className="text-lg font-bold">Andremeda</p> </div>
+        <div className="w-full md:w-2/12 "><p className="text-xl font-bold">Andremeda</p> </div>
         <div className="w-full md:w-4/12 font-thin">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores laboriosam quas quis tempora at. Tenetur, dignissimos similique autem vitae illum enim necessitatibus laborum accusamus praesentium cumque dolorem quam sint. Fugit.</div>
         <div className="w-full md:w-3/12">
           <div className="flex space-x-2 space-y-2 flex-wrap">
