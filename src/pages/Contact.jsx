@@ -38,7 +38,7 @@ const Contact = () => {
       <form
         ref={form}
         onSubmit={sendEmail}
-        className=" p-5 rounded-xl flex flex-col space-y-4 w-[800px]"
+        className=" p-5 rounded-xl flex flex-col space-y-4 w-[400px] md:w-[800px] "
         action=""
         method="post"
       >

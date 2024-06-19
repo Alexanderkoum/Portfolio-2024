@@ -40,6 +40,18 @@ function App() {
   })
   return (
     <div className="bg-gradient-to-r from-slate-950 to-sky-950 dotted">
+      
+<svg className="pointer-events-none fixed isolate z-50 opacity-70 mix-blend-soft-light w-screen h-screen">
+  <filter id='noiseFilter'>
+    <feTurbulence 
+      type='fractalNoise' 
+      baseFrequency='0.80' 
+      numOctaves='4' 
+      stitchTiles='stitch'/>
+  </filter>
+  
+  <rect width='100%' height='100%' filter='url(#noiseFilter)'/>
+</svg>
       <motion.div className="cursor ring " variants={variant} animate="default"/>
       <Header />
       <div className="bg-slate-950/65 min-h-screen dotted flex flex-col items-center justify-start py-36 md:py-48 px-3 md:py-0 ">

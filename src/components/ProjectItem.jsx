@@ -4,13 +4,13 @@ import SoftwareItem from "./SoftwareItem";
 import logo from "../assets/react.svg";
 import imageBanner from '../assets/bonvet-project-banner.png'
 import { Link } from "react-router-dom";
-import AboutIcon from "../assets/circle-user-solid.svg";
+import AboutIcon from "../assets/arrow-up-right.svg";
 import { motion } from "framer-motion";
 
 const ProjectItem = () => {
   return (
     <motion.div
-  className="max-w-6xl hover:backdrop-blur-xl pb-12 md:pb-2"
+  className="max-w-6xl pb-12 md:pb-2"
   initial={{ opacity: 0, y: 100 }}
   whileInView={{ opacity: 1, y: 0 }}
   transition={{
@@ -37,11 +37,11 @@ const ProjectItem = () => {
       </div>
       </div>
         <div className="w-full md:w-3/12">
-          <img src={imageBanner} alt="image project" className=""/>
-          <Link to="/About" className="flex items-center gap-2 rounded-full py-2 hover:border px-5 bg-sky-950/0 border-sky-900/0 hover:bg-sky-950 hover:border-sky-900 duration-300 ease-in-out mt-4">
+          <img src={imageBanner} alt="image project" className="rounded-lg"/>
+          <Link to="/About" className="flex items-center gap-2 rounded-full py-2 hover:border px-5 border border-slate-900 hover:bg-sky-950 hover:border-sky-900 duration-300 ease-in-out mt-4 inline">
               {" "}
-              <span className="hidden sm:inline text-white">About</span>{" "}
-              <img src={AboutIcon} alt="" />
+              <span className="text-white">Voir live</span>{" "}
+              <img src={AboutIcon} alt="arrow up right" className="w-[20px] h-[20px]" />
             </Link>
         </div>
       
