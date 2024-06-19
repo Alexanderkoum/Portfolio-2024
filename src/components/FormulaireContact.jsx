@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const variants = {
   open: { opacity:1, x: 0 },
-  closed: { opacity:0, x: "100%" },
+  closed: { opacity:1, x: "0%" },
 };
 
 const FormulaireContact = () => {
@@ -33,9 +33,9 @@ const FormulaireContact = () => {
     e.target.reset();
   };
   return (
-    <motion.div
-    className="absolute bottom-6 right-[-100px] w-screen h-screen z-80">
-      <motion.form
+    <div
+    className=" w-screen h-screen">
+      <form
         ref={form}
         onSubmit={sendEmail}
         className=" p-5 rounded-xl bg-gradient-to-r from-violet-500 to-fuchsia-500 flex flex-col space-y-4"
@@ -72,8 +72,8 @@ const FormulaireContact = () => {
           type="submit"
           value="Send"
         />
-      </motion.form>
-    </motion.div>
+      </form>
+    </div>
   );
 };
 

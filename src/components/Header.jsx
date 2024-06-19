@@ -42,16 +42,12 @@ const header = () => {
               <span className="hidden sm:inline text-white">About</span>{" "}
               <img src={AboutIcon} alt="" />
             </Link>
-            <motion.div animate={isOpen ? "open" : "closed"} variants={variants} ><FormulaireContact/></motion.div>
-            <button
-              text="Télécharger CV"
-              icon={DownloadIcon}
-              onClick={() => setIsOpen((isOpen) => !isOpen)}
-              className='flex gap-2 items-center rounded-full py-2 hover:border px-5 bg-sky-950/0 border-sky-900/0 hover:bg-sky-950 hover:border-sky-900 duration-300 ease-in-out'
-            >
-              <span className="hidden sm:inline">contact</span>
-              <img src={ContactIcon} alt="icon contact" />
-            </button>
+            <Link to="/Contact" className="flex items-center gap-2 rounded-full py-2 hover:border px-5 bg-sky-950/0 border-sky-900/0 hover:bg-sky-950 hover:border-sky-900 duration-300 ease-in-out">
+              {" "}
+              <span className="hidden sm:inline text-white">Contact</span>{" "}
+              <img src={ContactIcon} alt="" />
+            </Link>
+            
             
           </div>
         </div>
