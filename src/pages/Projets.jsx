@@ -2,6 +2,8 @@ import React from 'react'
 import ProjectList from '../components/ProjectList'
 import { motion } from "framer-motion";
 import ProjectItem from '../components/ProjectItem';
+import DataProject from "../assets/Data/projectData";
+
 
 const Projets = () => {
   return (
@@ -16,12 +18,12 @@ const Projets = () => {
       }}>
       <h1 className="text-6xl font-bold  decoration-sky-500 underline-offset-8 mb-16">Projets</h1>
       <div className=''>
-        <ProjectItem />
-        <ProjectItem />
-        <ProjectItem />
-        <ProjectItem />
-        <ProjectItem />
+      {DataProject.map((result, index) => (
+        <ProjectItem title={result.titleProject} image={result.banner} description={result.descProject}/>
+      ))}
       </div>
+
+      
     </motion.div>
   )
 }

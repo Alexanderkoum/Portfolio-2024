@@ -33,16 +33,23 @@ const Contact = () => {
     e.target.reset();
   };
   return (
-    <div
-    className=" max-w-36xl ">
+    <motion.div
+    className=" max-w-36xl relative"
+    initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.8,
+        delay: 0.5,
+        ease: [0, 0.71, 0.2, 1.01],
+      }}
+    >
       <form
         ref={form}
         onSubmit={sendEmail}
-        className=" p-5 rounded-xl flex flex-col space-y-4 w-[400px] md:w-[800px] "
+        className="rounded-xl flex flex-col space-y-4 w-[400px] md:w-[800px] shadow-2xl shadow-sky-900 border-2 border-sky-900 p-5"
         action=""
         method="post"
       >
-        <h2 className="text-4xl mb-3 font-bold">Parlons-en !!!</h2>
         <input
           className="rounded-xl p-4 bg-neutral-400/30"
           type="text"
@@ -73,7 +80,7 @@ const Contact = () => {
           value="Send"
         />
       </form>
-    </div>
+    </motion.div>
   );
 };
 export default Contact;
