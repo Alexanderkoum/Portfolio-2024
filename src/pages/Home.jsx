@@ -40,6 +40,9 @@ const Home = () => {
               title={result.titleProject}
               image={result.banner}
               description={result.descProject}
+              stack={result.stack.map((tech, techIndex) => (
+                <><SoftwareItem key={techIndex} children={tech} /></>
+            ))}
             />
           ))}
         </div>

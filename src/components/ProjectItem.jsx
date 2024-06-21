@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import AboutIcon from "../assets/arrow-up-right.svg";
 import { motion } from "framer-motion";
 
-const ProjectItem = ({ title, image,description }) => {
+const ProjectItem = ({ title, image,description,stack }) => {
   return (
     <motion.div
   className="max-w-6xl pb-12 md:pb-2"
@@ -23,17 +23,9 @@ const ProjectItem = ({ title, image,description }) => {
         <div className="w-full md:w-2/12 "><p className="text-5xl md:text-xl font-bold">{title}</p> </div>
         <div className="w-full md:w-4/12 font-thin">{description}</div>
         <div className="w-full md:w-3/12">
-          <div className="flex space-x-2 space-y-2 flex-wrap">
-        <SoftwareItem children="sql" />
-        <SoftwareItem children="html" />
-        <SoftwareItem children="javascript" />
-        <SoftwareItem children="scss" />
-        <SoftwareItem children="css" />
-        <SoftwareItem children="apex" />
-        <SoftwareItem children="wordpress" />
-        <SoftwareItem children="git" />
-        <SoftwareItem children="gitlab" />
-        <SoftwareItem children="python" />
+          <div className="flex flex-wrap">
+        {stack}
+        
       </div>
       </div>
         <div className="w-full md:w-3/12">

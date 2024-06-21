@@ -4,6 +4,9 @@ import { useRef } from "react";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
+import Duplicate from "../assets/duplicate-paste.svg"
+import CopyToClipboard from "../components/CopyToClipboard";
+import GridPattern from "../assets/gridpattern.png"
 
 const variants = {
   open: { opacity:1, x: 0 },
@@ -32,9 +35,11 @@ const Contact = () => {
       );
     e.target.reset();
   };
+
+
   return (
     <motion.div
-    className=" max-w-36xl relative"
+    className={` max-w-36xl relative flex gap-9 flex-wrap md:flex-nowrap w-[100%] md:w-[1100px] px-5 py-2 bg-hero-pattern bg-cover bg-no-repeat bg-center`}
     initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
@@ -42,7 +47,12 @@ const Contact = () => {
         delay: 0.5,
         ease: [0, 0.71, 0.2, 1.01],
       }}
-    >
+    > <div className='w-[400px] md:w-[800px] mb-24'>
+<h1 className="text-5xl md:text-8xl font-bold  decoration-sky-500 underline-offset-8 mb-16">Travaillons ensemble !</h1>
+      <p>Contactez-moi pour discuter de vos projets web. Je suis passionné par le développement front-end et prêt à relever de nouveaux défis</p>
+      <div className='absolute left-100'><CopyToClipboard/></div>
+    </div>
+      
       <form
         ref={form}
         onSubmit={sendEmail}
@@ -80,6 +90,8 @@ const Contact = () => {
           value="Send"
         />
       </form>
+
+      
     </motion.div>
   );
 };

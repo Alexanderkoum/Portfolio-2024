@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'hero-pattern': "url('/assets/doted-bg.png')",
+        'hero-pattern': "url('/assets/gridpattern.png')",
         'dotted-white': "url('/assets/minimal_halftone_pattern_background.jpg')",
       }
     },

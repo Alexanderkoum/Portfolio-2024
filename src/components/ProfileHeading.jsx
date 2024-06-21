@@ -8,7 +8,7 @@ const ProfileHeading = () => {
         
 
         <div className="flex flex-col gap-9 items-center md:items-start">
-          <p className="text-lg mb-3 font-bold py-2 mb-4 px-5 rounded-full py-2 border px-5 bg-sky-950 border-sky-900 w-auto md:max-w-[40%] text-center md:text-left">Salut! je m'appelle ALexander 🤙</p>
+          <p className="text-lg mb-3 font-bold py-2 mb-4 px-5 rounded-full py-2 border px-5 bg-sky-950 border-sky-900 w-auto md:max-w-[40%] text-center md:text-left">Salut! je m'appelle Alexander 🤙</p>
           <h1 className="text-6xl md:text-9xl mb-3 font-bold text-center md:text-left">Developpeur Front-end.</h1>
           <p className="text-md font-thin w-full md:w-6/12 text-center md:text-left leading-6">
           je suis un developper front-end avec 5 ans d'experience dans la conception d'interfaces web modernes et intuitives pour une expérience utilisateur optimale à l'aide de html, css , javascript , react , wordpress et plus.
