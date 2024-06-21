@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import ProfileHeading from "../components/ProfileHeading";
 import ProjectItem from "../components/ProjectItem";
 import DataProject from "../assets/Data/projectData";
+import ProjectList from "../components/ProjectList";
 
 const Home = () => {
   return (
@@ -34,18 +35,7 @@ const Home = () => {
         >
           <h2 className="">Quelques projets</h2>
         </motion.div>
-        <div className="">
-          {DataProject.map((result, index) => (
-            <ProjectItem
-              title={result.titleProject}
-              image={result.banner}
-              description={result.descProject}
-              stack={result.stack.map((tech, techIndex) => (
-                <><SoftwareItem key={techIndex} children={tech} /></>
-            ))}
-            />
-          ))}
-        </div>
+        <ProjectList/>
       </div>
     </>
   );
