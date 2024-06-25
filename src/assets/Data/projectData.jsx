@@ -15,7 +15,7 @@ const DataProject = [
         titleProject : 'Andromeda',
         lienProject : 'apple.ca',
         descProject : 'Forex platform for simplied trading',
-        stack : ['html','css','js','wordpress','graphQl']
+        stack : ['html','css','js','wordpress','Kinde']
     },
     {
         banner : SkillshootBanner,
