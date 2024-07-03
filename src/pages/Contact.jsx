@@ -39,7 +39,7 @@ const Contact = () => {
 
   return (
     <motion.div
-    className={` max-w-36xl relative flex gap-9 flex-wrap md:flex-nowrap w-[100%] md:w-[1100px] px-5 py-2 bg-hero-pattern bg-cover bg-no-repeat bg-center`}
+    className={` max-w-36xl relative flex gap-9 flex-wrap md:flex-nowrap w-[100%] md:w-[1100px] px-5 py-2 bg-hero-pattern bg-cover bg-no-repeat bg-center bg-opacity-10`}
     initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
@@ -56,7 +56,7 @@ const Contact = () => {
       <form
         ref={form}
         onSubmit={sendEmail}
-        className="rounded-xl flex flex-col space-y-4 w-[400px] md:w-[800px] shadow-2xl shadow-sky-900 border-2 border-sky-900 p-5"
+        className="rounded-xl flex flex-col space-y-4 w-[400px] md:w-[800px] shadow-2xl shadow-sky-900 border-2 border-sky-900 p-5 bg-slate-900"
         action=""
         method="post"
       >

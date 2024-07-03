@@ -9,7 +9,12 @@ export default {
       backgroundImage: {
         'hero-pattern': "url('./assets/gridpattern.png')",
         'dotted-white': "url('/assets/minimal_halftone_pattern_background.jpg')",
-      }
+      },
+      backgroundOpacity: {
+        '10': '0.1',
+        '20': '0.2',
+        '95': '0.95',
+       }
     },
   },
   plugins: [],
