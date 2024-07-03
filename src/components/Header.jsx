@@ -10,6 +10,7 @@ import AboutIcon from "../assets/circle-user-solid.svg";
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import FormulaireContact from "./FormulaireContact";
+import Logo from "../assets/logo.png"
 
 const variants = {
   open: { opacity: 1, y: '90vh',x:'-20px' },
@@ -25,7 +26,7 @@ const header = () => {
           <p className="text-xl  text-white hover:text-orange-400 ">
             <Link to="/" className="text-white hover:text-white">
               <span>
-                AK.
+                <img src={Logo} alt="Logo Alexander" className="w-[30px]" />
               </span>
             </Link>
           </p>
