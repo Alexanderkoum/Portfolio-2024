@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import AboutIcon from "../assets/arrow-up-right.svg";
 import { motion } from "framer-motion";
 
-const ProjectItem = ({ title, image,description,stack }) => {
+const ProjectItem = ({ title, image,description,stack,lienProject }) => {
   return (
     <motion.div
   className="max-w-6xl pb-12 md:pb-2"
@@ -30,9 +30,9 @@ const ProjectItem = ({ title, image,description,stack }) => {
       </div>
         <div className="w-full md:w-3/12">
           <img src={image} alt="image project" className="rounded-lg"/>
-          <Link to="/About" className="flex items-center gap-2 rounded-full py-2 hover:border px-5 border border-slate-900 hover:bg-sky-950 hover:border-sky-900 duration-300 ease-in-out mt-4 inline">
-              {" "}
-              <span className="text-white">Voir live</span>{" "}
+          <Link to={lienProject} className="flex items-center gap-2 rounded-full py-2 hover:border px-5 border border-slate-900 hover:bg-sky-950 hover:border-sky-900 duration-300 ease-in-out mt-4 inline">
+              
+              <span className="text-white">Voir live</span>
               <img src={AboutIcon} alt="arrow up right" className="w-[20px] h-[20px]" />
             </Link>
         </div>

@@ -15,6 +15,7 @@ const ProjectList = () => {
               title={result.titleProject}
               image={result.banner}
               description={result.descProject}
+              lienProject={result.lienProject}
               stack={result.stack.map((tech, techIndex) => (
                 <><SoftwareItem key={techIndex} children={tech} /></>
             ))}

@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <>
       <motion.div
-        className="max-w-6xl min-h-screen "
+        className="max-w-6xl min-h-screen bg-hero-pattern bg-contain bg-repeat bg-center bg-opacity-5 "
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{

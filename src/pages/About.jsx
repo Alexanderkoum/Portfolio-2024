@@ -4,6 +4,8 @@ import Profile from "../assets/imageprofile.png";
 import ProfileHeading from "../components/ProfileHeading";
 import SoftwareItem from "../components/SoftwareItem";
 import AnimProfile from "../assets/room-coding.png";
+import Experience from "../components/Experience";
+import experienceData from "../assets/Data/experienceData";
 
 const About = () => {
   return (
@@ -22,23 +24,16 @@ const About = () => {
         <div>
           <div className="my-9 p-9 border-none rounded-xl bg-slate-900">
             <h2 className="text-2xl font-bold underline decoration-sky-500 underline-offset-8 mb-5">
-              Experience
+              Resume
             </h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-              explicabo provident aperiam voluptatibus quisquam est rerum,
-              inventore saepe deleniti deserunt ea, nesciunt atque odio illum,
-              odit veniam consequatur quo amet! Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Aspernatur repellendus, quod iusto
-              porro a nemo asperiores? Libero laudantium, vel natus unde impedit
-              illo accusamus nihil aspernatur accusantium nemo molestiae
-              voluptate!
+              Je suis un Developpeur web avec une specialisation en front end qui possede 5 ans d'experience . mon experience en agence web au travers de different postes m'a permis d'obtenir une experience assez diversifie sur les differents metiers du web . 
             </p>
           </div>
         </div>
         <div>
           <div className="my-9 p-9 border-none rounded-xl bg-slate-900 flex items-center justify-center">
-          <img src={AnimProfile} alt="3d profile" className="h-[18.3rem]" />
+          <img src={AnimProfile} alt="3d profile" className="h-[12.3rem]" />
           </div>
           
         </div>
@@ -47,15 +42,18 @@ const About = () => {
         <h2 className="text-2xl font-bold underline decoration-sky-500 underline-offset-8 mb-5">
           Experience
         </h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-          explicabo provident aperiam voluptatibus quisquam est rerum, inventore
-          saepe deleniti deserunt ea, nesciunt atque odio illum, odit veniam
-          consequatur quo amet! Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Aspernatur repellendus, quod iusto porro a nemo
-          asperiores? Libero laudantium, vel natus unde impedit illo accusamus
-          nihil aspernatur accusantium nemo molestiae voluptate!
-        </p>
+        {experienceData.map((data, index) => (
+            <Experience
+              periode={data.periode}
+              role={data.role}
+              company={data.company}
+              jobtasks={data.jobtasks.map((task, taskIndex) => (
+                <li key={taskIndex}>{task}</li>
+            ))}
+            />
+          ))}
+
+        
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div className="my-9 p-9 border-none rounded-xl bg-slate-900">
