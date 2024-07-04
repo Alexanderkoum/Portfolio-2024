@@ -22,7 +22,7 @@ const DataProject = [
     {
         banner : SkillshootBanner,
         titleProject : 'Skillshoot',
-        lienProject : 'Skillshoot.ca',
+        lienProject : 'https://alexanderkoum.github.io/SkillShoot/',
         descProject : 'Learning platform design for everyone and every age',
         stack : ['html','css','js','git']
     },
