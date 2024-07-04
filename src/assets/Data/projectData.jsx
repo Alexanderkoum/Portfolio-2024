@@ -10,7 +10,7 @@ const DataProject = [
         titleProject : 'Andromeda',
         lienProject : 'Andromeda.ca',
         descProject : 'Forex platform for simplied trading',
-        stack : ['React','Tailwind','Framer motion','Kinde']
+        stack : ['React','Tailwind','Framer motion','Kinde', 'Axios']
     },
     {
         banner : Solidarityvwc,
