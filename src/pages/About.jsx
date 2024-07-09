@@ -55,21 +55,6 @@ const About = () => {
 
         
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div className="my-9 p-9 border-none rounded-xl bg-slate-900">
-          <p className="text-[8rem] font-bold text-violet-500">4+</p>
-          <p>Annees d'experience</p>
-        </div>
-        <div className="my-9 p-9 border-none rounded-xl bg-slate-900">
-          <p className="text-[8rem] font-bold text-fuchsia-500">100+</p>
-          <p>Site web realise*</p>
-        </div>
-      </div>
-      <p className="text-[9px] text-right">
-        *certains realise sous couvert de l'agence{" "}
-        <span className="text-pink-500">Shortkut</span>, ces projets ne figure
-        pas dans ce portfolio.
-      </p>
       <div className="my-9 p-9 border-none rounded-xl bg-slate-950 ring ring-fuchsia-500">
         <h2 className="text-2xl font-bold underline decoration-indigo-500 underline-offset-8 mb-5">
           Stacks i Know
@@ -87,6 +72,22 @@ const About = () => {
           <SoftwareItem children="PYTHON" />
         </div>
       </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="my-9 p-9 border-none rounded-xl bg-slate-900">
+          <p className="text-[8rem] font-bold text-violet-500">4+</p>
+          <p>Annees d'experience</p>
+        </div>
+        <div className="my-9 p-9 border-none rounded-xl bg-slate-900">
+          <p className="text-[8rem] font-bold text-fuchsia-500">100+</p>
+          <p>Site web realise*</p>
+        </div>
+      </div>
+      <p className="text-[9px] text-right">
+        *certains realise sous couvert de l'agence{" "}
+        <span className="text-pink-500">Shortkut</span>, ces projets ne figure
+        pas dans ce portfolio.
+      </p>
+      
       <div className="my-9 p-9 border-none rounded-xl bg-slate-900">
         <h2 className="text-2xl font-bold underline decoration-sky-500 underline-offset-8 mb-5">
           Education
