@@ -8,15 +8,15 @@ const DataProject = [
     {
         banner : AndromedaBanner,
         titleProject : 'Andromeda',
-        lienProject : 'Andromeda.ca',
-        descProject : 'Forex platform for simplied trading',
+        lienProject : 'https://andromeda-app.vercel.app/',
+        descProject : 'Plateforme Forex conçue pour simplifier le trading pour tous les niveaux, la plateforme et le projet fournissent une option de connexion et des appels API sur le trading Api. J’étais le concepteur Front-end, Backend et UI/UX sur le projet. ',
         stack : ['React','Tailwind','Framer motion','Kinde', 'Axios']
     },
     {
         banner : Solidarityvwc,
         titleProject : 'Solidarity VWC',
         lienProject : 'https://solidarityvwc.com/',
-        descProject : 'Solidarity VWC is a charity in action in Haiti , helping with providing relief for the vulnerable , women and childres . on this project i was the UX DESIGNER and WEB DEVELOPER',
+        descProject : 'Solidarity VWC est une association caritative en action en Haïti, aidant à fournir des secours aux personnes vulnérables, aux femmes et aux enfants. Sur ce projet, j’étais UX DESIGNER et WEB DEVELOPER',
         stack : ['Wordpress','Contact Form 7','Divi','Yoast SEO','Cookie Law info','Figma','Canva']
     },
     {
