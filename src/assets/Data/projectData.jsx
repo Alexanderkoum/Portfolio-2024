@@ -29,7 +29,7 @@ const DataProject = [
     {
         banner : BonvetBanner,
         titleProject : 'Bonvet',
-        lienProject : 'Bonvet.ca',
+        lienProject : 'https://bonvet.vercel.app/',
         descProject : 'this is a project to help people with the tools that they are using for their dogs ',
         stack : ['React','Tailwind','Framer motion','figma']
     }
