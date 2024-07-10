@@ -13,7 +13,7 @@ const EducationData = [
     },
     {
         degree:"Baccalaureat Bio-informatique",
-        school:"College CDI",
+        school:"Université de Montréal",
         location:"Montreal, Canada"
     }
 ]
