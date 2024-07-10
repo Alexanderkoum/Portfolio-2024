@@ -2,7 +2,7 @@ const EducationData = [
     {
         degree:"Certification Administrateur Salesforce",
         school:"Salesforce Trailhead",
-        periode:"2017 - 2019",
+        periode:"2024",
         location:"Montreal, Canada"
     },
     {
