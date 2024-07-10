@@ -95,27 +95,13 @@ const About = () => {
         </h2>
         {EducationData.map((data, index) => (
             <Experience
-              periode={data.degree}
-              role={data.school}
-              company={data.periode}
+              periode={data.periode}
+              role={data.degree}
+              company={data.school}
               jobtasks={data.location}
             
             />
           ))}
-      </div>
-      <div className="my-9 p-9 border-none rounded-xl bg-slate-900">
-        <h2 className="text-2xl font-bold underline decoration-pink-500 underline-offset-8 mb-5">
-          Hobbies
-        </h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-          explicabo provident aperiam voluptatibus quisquam est rerum, inventore
-          saepe deleniti deserunt ea, nesciunt atque odio illum, odit veniam
-          consequatur quo amet! Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Aspernatur repellendus, quod iusto porro a nemo
-          asperiores? Libero laudantium, vel natus unde impedit illo accusamus
-          nihil aspernatur accusantium nemo molestiae voluptate!
-        </p>
       </div>
     </motion.div>
   );
