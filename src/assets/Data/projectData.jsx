@@ -2,6 +2,7 @@ import BonvetBanner from "../../assets/bonvet-project-banner.png"
 import SkillshootBanner from "../../assets/skillshoot.png"
 import AndromedaBanner from "../../assets/andromeda.png"
 import Solidarityvwc from "../../assets/solidarityvwc.png"
+import Ownerfinancing from "../../assets/ownerfanacing.png"
 
 const DataProject = [
     
@@ -20,11 +21,11 @@ const DataProject = [
         stack : ['Wordpress','Contact Form 7','Divi','Yoast SEO','Cookie Law info','Figma','Canva']
     },
     {
-        banner : SkillshootBanner,
-        titleProject : 'Skillshoot',
-        lienProject : 'https://alexanderkoum.github.io/SkillShoot/',
-        descProject : 'Learning platform design for everyone and every age',
-        stack : ['html','css','js','git']
+        banner : Ownerfinancing,
+        titleProject : 'Owner Financing',
+        lienProject : 'https://ownerfinancing.io/',
+        descProject : 'Owner financing est une plateforme permettant de fourninr au proprietaire de logement un option pour leur acheteurs, en leur permettant de payer leurs mise de fond en plusieurs mensualite . sur ce projet consistant a la landing page / waiting list je fus le designer UI/UX et le Developpeur Web',
+        stack : ['wordpress','Divi','Contact form 7','cpanel', 'Contact form DB', 'canva', 'figma']
     },
     {
         banner : BonvetBanner,
@@ -32,6 +33,13 @@ const DataProject = [
         lienProject : 'https://bonvet.vercel.app/',
         descProject : 'this is a project to help people with the tools that they are using for their dogs ',
         stack : ['React','Tailwind','Framer motion','figma']
+    },
+    {
+        banner : SkillshootBanner,
+        titleProject : 'Skillshoot',
+        lienProject : 'https://alexanderkoum.github.io/SkillShoot/',
+        descProject : 'Learning platform design for everyone and every age',
+        stack : ['html','css','js','git']
     }
 ]
 
