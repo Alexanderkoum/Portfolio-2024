@@ -34,13 +34,6 @@ const DataProject = [
         descProject : 'this is a project to help people with the tools that they are using for their dogs ',
         stack : ['React','Tailwind','Framer motion','figma']
     },
-    {
-        banner : SkillshootBanner,
-        titleProject : 'Skillshoot',
-        lienProject : 'https://alexanderkoum.github.io/SkillShoot/',
-        descProject : 'Learning platform design for everyone and every age',
-        stack : ['html','css','js','git']
-    }
 ]
 
 export default DataProject;
