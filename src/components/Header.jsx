@@ -33,11 +33,11 @@ const header = () => {
         </div>
         <div className="flex space-x-2">
           <div className="flex space-x-2 rounded-full py-2 border px-2 bg-slate-900 border-slate-900">
-            <Link to="/projets" className="flex items-center gap-2 rounded-full py-2 hover:border px-5 bg-sky-950/0 border-sky-900/0 hover:bg-sky-950 hover:border-sky-900 duration-300 ease-in-out">
+            {/*<Link to="/projets" className="flex items-center gap-2 rounded-full py-2 hover:border px-5 bg-sky-950/0 border-sky-900/0 hover:bg-sky-950 hover:border-sky-900 duration-300 ease-in-out">
               {" "}
               <span className="hidden sm:inline text-white">Projets</span>{" "}
               <img src={ProjectIcon} alt="" />
-            </Link>
+  </Link>*/}
             <Link to="/About" className="flex items-center gap-2 rounded-full py-2 hover:border px-5 bg-sky-950/0 border-sky-900/0 hover:bg-sky-950 hover:border-sky-900 duration-300 ease-in-out">
               {" "}
               <span className="hidden sm:inline text-white">About</span>{" "}

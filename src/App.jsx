@@ -12,6 +12,10 @@ import Contact from './pages/Contact'
 import About from "./pages/About";
 import FormulaireContact from "./components/FormulaireContact";
 import { motion } from "framer-motion";
+import Cta from "./components/Cta";
+import ProjectDetails from "./components/ProjectDetails";
+import ScrollToTop from "./components/ScrollToTop";
+
 
 function App() {
 
@@ -39,7 +43,7 @@ function App() {
     }
   })
   return (
-    <div className="bg-gradient-to-r from-slate-950 to-sky-950 dotted">
+    <div className={`bg-gradient-to-r from-slate-950 to-sky-950 dotted`}>
       
 <svg className="pointer-events-none fixed isolate z-50 opacity-70 mix-blend-soft-light w-screen h-screen">
   <filter id='noiseFilter'>
@@ -52,7 +56,7 @@ function App() {
   
   <rect width='100%' height='100%' filter='url(#noiseFilter)'/>
 </svg>
-      
+      <ScrollToTop />
       <Header />
       <div className="bg-slate-950/65 min-h-screen dotted flex flex-col items-center justify-start py-36 md:py-48 px-3 md:py-0 ">
         <Routes>
@@ -61,9 +65,13 @@ function App() {
           <Route path="/projets" element={<Projets />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/About" element={<About />} />
+          <Route path="/:projectTitle" element={<ProjectDetails />} />
         </Routes>
       </div>
-
+      <div className="bg-slate-950/65 min-h-screen dotted flex flex-col items-center justify-start  ">
+        <Cta/>
+      </div>
+      
       <Footer />
       
     </div>

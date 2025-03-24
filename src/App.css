@@ -9,6 +9,21 @@
   background-size: cover;
 }
 
+.bayon-regular {
+  font-family: "Bayon", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.gradientPink{
+  /*background-image: url(./assets/blue-pink-gradient.jpg);
+  background-position: center center;
+  background-size: cover;*/
+  background: radial-gradient(#05ecec,#025fff,#0459b9);
+  background-size: 180% 180%;
+  animation: gradient-animation 12s ease infinite;
+}
+
 .cursor{
   width:50px;
   height:50px;
@@ -17,4 +32,16 @@
   top:0;
   left:0;
   transform: translate(50%,50%);
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
