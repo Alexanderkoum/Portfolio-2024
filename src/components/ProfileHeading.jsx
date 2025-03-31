@@ -39,7 +39,7 @@ const ProfileHeading = () => {
             loop
             autoplay
             className='h-[10px] md:h-[20px]'
-          /> <span> Disponible pour des projets</span>
+          /> <span className='w-10/12'> Disponible pour des projets</span>
           </p>
           <motion.h1
           variants={containerVariants}
