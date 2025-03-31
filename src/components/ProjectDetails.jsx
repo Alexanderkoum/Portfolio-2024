@@ -31,7 +31,7 @@ function ProjectDetails() {
   }
 
   return (
-    <div className='max-w-3/12 w-full px-4 md:max-w-6xl md:pt-36'>
+    <div className='max-w-3/12 w-full px-4 md:max-w-6xl pt-36'>
         <motion.div 
         className='flex gap-2 flex-wrap justify-between'
         variants = {animateOnAppear}
@@ -68,7 +68,7 @@ function ProjectDetails() {
         viewport={{once : true}}/>
         
         <motion.div
-          className="py-5 flex flex-wrap border-b"
+          className="py-5 md:flex flex-wrap border-b"
           variants = {animateOnAppear}
         initial = "initial"
         whileInView = 'animate'
@@ -76,12 +76,12 @@ function ProjectDetails() {
         >
             
             <p className='pb-5 text-sky-400 uppercase font-bold w-8/12'>Le probleme</p>
-            <p className='pb-5 text-white w-4/12'>
+            <p className='pb-5 text-white md:w-4/12'>
             {project.probleme}
             </p>
           </motion.div>
           <motion.div
-          className="py-5 flex flex-wrap border-b"
+          className="py-5 md:flex flex-wrap border-b"
           variants = {animateOnAppear}
         initial = "initial"
         whileInView = 'animate'
@@ -89,7 +89,7 @@ function ProjectDetails() {
         >
             
             <p className='pb-5 text-sky-400 uppercase font-bold w-8/12 '>La Solution</p>
-            <p className='pb-5 text-white w-4/12'>
+            <p className='pb-5 text-white md:w-4/12'>
             {project.Solution}
             </p>
           </motion.div>

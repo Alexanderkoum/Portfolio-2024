@@ -32,13 +32,13 @@ const ProfileHeading = () => {
         
 
         <div className="flex flex-col gap-9 items-center justify-center ">
-          <img className="h-48 w-48 md:h-20 md:w-20 rounded-full ring " src={Profile} alt="" />
-          <p className="text-sm mb-3 font-bold py-2 mb-4  rounded-full py-2 border pr-5 bg-sky-950 border-sky-900 w-auto md:max-w-[80%] text-center md:text-left flex  items-center justify-center text-sky-400 ">
+          <img className="h-24 w-24 md:h-20 md:w-20 rounded-full ring " src={Profile} alt="" />
+          <p className="text-sm mb-3 font-bold py-2   rounded-full py-2 border pr-5 bg-sky-950 border-sky-900 w-auto md:max-w-[80%] text-center md:text-left flex items-center justify-center text-sky-400 ">
           <DotLottieReact
             src="https://lottie.host/02c3b659-311a-493a-aadd-570b9189649a/qjhRnYpiBb.lottie"
             loop
             autoplay
-            className='h-[20px]'
+            className='h-[10px] md:h-[20px]'
           /> <span> Disponible pour des projets</span>
           </p>
           <motion.h1

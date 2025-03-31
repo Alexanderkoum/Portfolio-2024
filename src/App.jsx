@@ -63,7 +63,7 @@ function App() {
       <Header />
       <div 
       
-      className="bg-slate-950/65 min-h-screen dotted flex flex-col items-center justify-start pb-36 md:pb-36 px-3 md:px-0 md:py-0 ">
+      className="bg-slate-950/65 min-h-screen dotted flex flex-col items-center justify-start pb-36 md:pb-36 md:px-0 md:py-0 ">
         <Routes>
           <Route index element={<Home />} />
           <Route path="/home" element={<Home />} />

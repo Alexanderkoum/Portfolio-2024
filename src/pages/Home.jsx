@@ -27,7 +27,7 @@ const Home = () => {
     <>
       <motion.div
         
-        className="w-full min-h-screen bg-hero-pattern bg-contain bg-repeat bg-center bg-opacity-5 flex items-center justify-center "
+        className="w-full min-h-screen pt-36 md:pt-0 bg-hero-pattern bg-contain bg-repeat bg-center bg-opacity-5 flex items-center justify-center "
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
