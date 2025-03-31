@@ -46,7 +46,7 @@ function App() {
     <motion.div 
     /* */
     
-    className={`bg-gradient-to-r from-slate-950 to-sky-950 dotted`}>
+    className={`bg-gradient-to-r from-slate-950 to-sky-950 dotted scroll-smooth`}>
       
 <svg className="pointer-events-none fixed isolate z-50 opacity-70 mix-blend-soft-light w-screen h-screen">
   <filter id='noiseFilter'>
