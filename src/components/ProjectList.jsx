@@ -10,10 +10,10 @@ import { Link } from "react-router-dom";
 const ProjectList = () => {
 
   return (
-    <div className="">
+    <>
           {DataProject.map((result, index) => (<>
             <ProjectItem
-              key={result.titleProject}
+              key={index}
               title={result.titleProject}
               image={result.banner}
               description={result.descProject}
@@ -25,7 +25,7 @@ const ProjectList = () => {
             />
             </>
           ))}
-        </div>
+        </>
   );
 };
 

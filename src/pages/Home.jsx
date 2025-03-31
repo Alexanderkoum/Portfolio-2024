@@ -7,21 +7,27 @@ import ProjectItem from "../components/ProjectItem";
 import DataProject from "../assets/Data/projectData";
 import ProjectList from "../components/ProjectList";
 import { useTransform,useScroll } from "framer-motion";
+import { useRef } from "react";
 
 const Home = () => {
+  const targetRef  = useRef<HTMLDivElement | null>(null);
+  const {scrollYProgress} = useScroll({
+    target:targetRef,
+  });
 
-  const {scrollYProgress} = useScroll();
+  const x = useTransform(scrollYProgress, [.15,1],["37%","-55%"])
+  /*const {scrollYProgress} = useScroll();
 
-  const translateY = useTransform(scrollYProgress, [0,.1,.3,1],["-0vh", "-10vh","-10vh","200vh"])
-  const scale = useTransform(scrollYProgress, [.3,1],[1, 2])
-  const opacity = useTransform(scrollYProgress, [.3,.35],[1, 0])
-  const visibility = useTransform(scrollYProgress, [.3,.35],["visible", "hidden"])
+  const translateY = useTransform(scrollYProgress, [0,.1,.3,1],["-0vh", "-5vh","-5vh","200vh"])
+  const scale = useTransform(scrollYProgress, [.3,1],[.8, 1])
+  const opacity = useTransform(scrollYProgress, [.3,.35],[1, 0])*/
+  
   
   return (
-    <motion.div>
+    <>
       <motion.div
         
-        className="max-w-6xl min-h-screen bg-hero-pattern bg-contain bg-repeat bg-center bg-opacity-5 "
+        className="w-full min-h-screen bg-hero-pattern bg-contain bg-repeat bg-center bg-opacity-5 flex items-center justify-center "
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -32,24 +38,46 @@ const Home = () => {
       >
         <ProfileHeading />
       </motion.div>
-      <div className="max-w-6xl">
-        <motion.div
-        style= {{translateY,scale,opacity,visibility}}
-          className="pb-12  flex flex-col items-center justify-center text-center max-w-6xl"
-          /*initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.8,
-            delay: 0.5,
-            ease: [0, 0.71, 0.2, 1.01],
-          }}*/
-        >
-          <h2 className="bayon-regular text-4xl md:text-7xl tracking-tighter font-bold uppercase text-center bg-clip-text text-white">Projets<sup className='text-cyan-400 text-md leading-6 p-5 '>4</sup></h2>
-          <p className='text-md font-thin md:w-6/12 text-center md:text-center leading-6'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit pariatur odio quod id autem fugiat ab, officiis aspernatur animi facere dolore incidunt odit provident dignissimos iure neque enim hic ad.</p>
-        </motion.div>
-        <ProjectList/>
-      </div>
-    </motion.div>
+      <motion.div 
+      ref={{targetRef}}
+      
+      className='relative h-[600vh] bg-red-900 w-full'>
+              <motion.div 
+        
+                initial ={{backgroundColor: "oklch(0.962 0.018 272.314 / 0)" }}
+                whileInView = {{backgroundColor: "oklch(0.962 0.018 272.314 )" }}
+                transition={{
+                  duration:.3,
+                  delay:2.5,
+                  ease: [0, 0.71, 0.2, 1.01],
+                }}
+                className="sticky top-0 overflow-hidden w-full min-h-screen flex items-center justify-center flex-col py-24">
+                <motion.div
+
+                  className="pb-12  flex flex-col items-center justify-center text-center max-w-6xl"
+                  initial={{ opacity: 0, y: 100 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.8,
+                    delay: .5,
+                    ease: [0, 0.71, 0.2, 1.01],
+                  }}
+                >
+                  <h2 className="bayon-regular text-4xl md:text-7xl tracking-tighter font-bold text-center bg-gradient-to-t from-cyan-50 to-cyan-900 bg-clip-text text-transparent">Portfolio<sup className='bg-gradient-to-t from-white-500 to-slate-900 bg-clip-text text-transparent text-md leading-6 p-5 '>4</sup></h2>
+                  
+                </motion.div>
+
+                <motion.div 
+                style={{x}}
+                className="flex gap-2 md:gap-4">
+                  <ProjectList/>
+                </motion.div>
+              </motion.div>
+      </motion.div>
+      
+      
+      
+    </>
   );
 };
 

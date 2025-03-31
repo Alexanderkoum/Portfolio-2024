@@ -20,7 +20,7 @@ const cta = () => {
   return (
     <motion.div 
     style ={{scale, borderRadius}} 
-    className={`relative bayon-regular flex items-center justify-center h-[100vh] overflow-hidden gradientPink`}
+    className={`relative bayon-regular flex items-center justify-center h-[100vh] overflow-hidden bg-black`}
     initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -30,16 +30,16 @@ const cta = () => {
         }}>
         <div 
         style ={{borderRadius}}
-        className="bg-white/30 backdrop-blur-lg p-16 flex flex-col justify-end items-start gap-5  text-white h-full">
+        className="bg-cyan-900 dotted backdrop-blur-lg p-16 flex flex-col justify-end items-start gap-5  text-white h-full">
         <p className="flex m-2 gap-2 pr-16 items-center justify-center rounded-full font-regular  text-white bg-cyan-900/20 ring ring-cyan-400 text-sm ">
             <DotLottieReact
       src="https://lottie.host/02c3b659-311a-493a-aadd-570b9189649a/qjhRnYpiBb.lottie"
       loop
       autoplay
       className='h-[40px]'
-    /><span>Recherche Active</span> </p>
+    /><span>Disponible pour des projets</span> </p>
         <motion.h2 
-        className='text-[15vw] leading-none font-bold tracking-tighter z-5 uppercase'
+        className='text-[15vw] leading-none font-bold tracking-tighter z-5 uppercase gradientPink text-transparent bg-clip-text'
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{

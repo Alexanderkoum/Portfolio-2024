@@ -19,7 +19,7 @@
   /*background-image: url(./assets/blue-pink-gradient.jpg);
   background-position: center center;
   background-size: cover;*/
-  background: radial-gradient(#05ecec,#025fff,#0459b9);
+  background: radial-gradient(oklch(0.715 0.143 215.221),oklch(0.398 0.07 227.392));
   background-size: 180% 180%;
   animation: gradient-animation 12s ease infinite;
 }

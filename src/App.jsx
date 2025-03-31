@@ -43,7 +43,10 @@ function App() {
     }
   })
   return (
-    <div className={`bg-gradient-to-r from-slate-950 to-sky-950 dotted`}>
+    <motion.div 
+    /* */
+    
+    className={`bg-gradient-to-r from-slate-950 to-sky-950 dotted`}>
       
 <svg className="pointer-events-none fixed isolate z-50 opacity-70 mix-blend-soft-light w-screen h-screen">
   <filter id='noiseFilter'>
@@ -58,7 +61,9 @@ function App() {
 </svg>
       <ScrollToTop />
       <Header />
-      <div className="bg-slate-950/65 min-h-screen dotted flex flex-col items-center justify-start py-36 md:py-48 px-3 md:py-0 ">
+      <div 
+      
+      className="bg-slate-950/65 min-h-screen dotted flex flex-col items-center justify-start pb-36 md:pb-36 px-3 md:px-0 md:py-0 ">
         <Routes>
           <Route index element={<Home />} />
           <Route path="/home" element={<Home />} />
@@ -66,6 +71,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/About" element={<About />} />
           <Route path="/:projectTitle" element={<ProjectDetails />} />
+          <Route path="/projets/:projectTitle" element={<ProjectDetails />} />
         </Routes>
       </div>
       <div className="bg-slate-950/65 min-h-screen dotted flex flex-col items-center justify-start  ">
@@ -74,7 +80,7 @@ function App() {
       
       <Footer />
       
-    </div>
+    </motion.div>
   );
 }
 

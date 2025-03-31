@@ -1,15 +1,15 @@
 import React from 'react'
 import { motion } from "framer-motion";
 import Profile from "../assets/imageprofile.png";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 
-const text = `Je suis un développeur front-end avec 5 ans d'expérience 
-dans la conception d'interfaces web modernes et intuitives 
-pour une expérience utilisateur optimale à l'aide de HTML,
+const text = `Je suis un développeur front-end avec 5 ans d'expérience dans la conception 
+d'interfaces web modernes et intuitives pour une expérience utilisateur optimale à l'aide de HTML,
 CSS, JavaScript, React, WordPress et plus.`;
 
-const title = `DEVELOPPEUR 
-FRONT-END`
+const title = `Créateur d’expériences web 
+performantes.`
 
 // Animation Variants
 const containerVariants = {
@@ -28,16 +28,24 @@ const lineVariants = {
 const ProfileHeading = () => {
 
   return (
-    <motion.div className="flex flex-wrap-reverse md:flex-nowrap gap-7 items-center justify-center">
+    <motion.div className="max-w-6xl flex flex-wrap-reverse md:flex-nowrap gap-7 items-center justify-center">
         
 
-        <div className="flex flex-col gap-9 items-center md:items-start">
-          <p className="text-lg mb-3 font-bold py-2 mb-4 px-5 rounded-full py-2 border px-5 bg-sky-950 border-sky-900 w-auto md:max-w-[40%] text-center md:text-left">Salut! je m'appelle Alexander 🤙</p>
+        <div className="flex flex-col gap-9 items-center justify-center ">
+          <img className="h-48 w-48 md:h-20 md:w-20 rounded-full ring " src={Profile} alt="" />
+          <p className="text-sm mb-3 font-bold py-2 mb-4  rounded-full py-2 border pr-5 bg-sky-950 border-sky-900 w-auto md:max-w-[80%] text-center md:text-left flex  items-center justify-center text-sky-400 ">
+          <DotLottieReact
+            src="https://lottie.host/02c3b659-311a-493a-aadd-570b9189649a/qjhRnYpiBb.lottie"
+            loop
+            autoplay
+            className='h-[20px]'
+          /> <span> Disponible pour des projets</span>
+          </p>
           <motion.h1
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="bayon-regular tracking-tighter text-4xl md:text-9xl mb-3 font-bold text-center md:text-left">{title.split("\n").map((lines, index) => (
+          className="bayon-regular tracking-tighter text-4xl md:text-8xl mb-3 font-bold text-center bg-gradient-to-t from-stone-50 to-cyan-900 bg-clip-text text-transparent">{title.split("\n").map((lines, index) => (
             <motion.span key={index} variants={lineVariants} className="mb-5">
               {lines}
             </motion.span>
@@ -46,16 +54,16 @@ const ProfileHeading = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="text-md font-thin w-full md:w-6/12 text-center md:text-left leading-6"
-        >
+          className="text-md font-thin w-full md:w-8/12 text-center leading-6"
+          >
           {text.split("\n").map((line, index) => (
             <motion.p key={index} variants={lineVariants} className="mb-2">
               {line}
             </motion.p>
           ))}
-        </motion.div>
+          </motion.div>
         </div>
-        <img className="h-48 w-48 md:h-64 md:w-64 rounded-full ring " src={Profile} alt="" />
+        
         
         
       </motion.div>
