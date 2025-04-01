@@ -11,7 +11,7 @@ import { CircleEllipsis, SquareArrowOutUpRight } from 'lucide-react';
 const ProjectItem = ({ title, image,description,stack,lienProject,id }) => {
   return (
     <motion.div
-      className="md:w-[50vw]  md:py-5 z-5 p-5 m-4 mb-12 rounded-lg bg-white border-4 border-slate-100/20"
+      className="md:w-[40vw]  md:py-5 z-5 p-5 m-4 mb-12 rounded-lg bg-white border-4 border-slate-100/20"
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ amount: 0.6 , once : true}}

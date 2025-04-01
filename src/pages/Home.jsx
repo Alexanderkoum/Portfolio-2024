@@ -69,7 +69,7 @@ const Home = () => {
 
                 <motion.div 
                 style={{x}}
-                className="flex gap-2 md:gap-4 ">
+                className="flex gap-2 md:gap-12 ">
                   <ProjectList/>
                 </motion.div>
               </motion.div>
