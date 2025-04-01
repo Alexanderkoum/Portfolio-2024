@@ -41,7 +41,7 @@ const Home = () => {
       <motion.div 
       ref={{targetRef}}
       
-      className='relative h-[600vh] bg-red-900 w-full'>
+      className='relative h-[690vh] bg-red-900 w-full'>
               <motion.div 
         
                 initial ={{backgroundColor: "oklch(0.962 0.018 272.314 / 0)" }}
@@ -63,13 +63,13 @@ const Home = () => {
                     ease: [0, 0.71, 0.2, 1.01],
                   }}
                 >
-                  <h2 className="bayon-regular text-4xl md:text-7xl tracking-tighter font-bold text-center bg-gradient-to-t from-cyan-50 to-cyan-900 bg-clip-text text-transparent">Portfolio<sup className='bg-gradient-to-t from-white-500 to-slate-900 bg-clip-text text-transparent text-md leading-6 p-5 '>4</sup></h2>
+                  <h2 className="bayon-regular text-5xl md:text-8xl tracking-tighter font-bold text-center bg-gradient-to-t from-cyan-50 to-cyan-900 bg-clip-text text-transparent">Portfolio<sup className='bg-gradient-to-t from-white-500 to-slate-900 bg-clip-text text-transparent text-md leading-6 p-2 '>4</sup></h2>
                   
                 </motion.div>
 
                 <motion.div 
                 style={{x}}
-                className="flex gap-2 md:gap-4">
+                className="flex gap-2 md:gap-4 ">
                   <ProjectList/>
                 </motion.div>
               </motion.div>

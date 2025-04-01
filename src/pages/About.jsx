@@ -11,7 +11,7 @@ import EducationData from "../assets/Data/educationData";
 const About = () => {
   return (
     <motion.div
-      className="max-w-4xl"
+      className="max-w-4xl md:pt-36"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
