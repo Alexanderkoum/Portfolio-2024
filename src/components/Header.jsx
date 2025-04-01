@@ -11,6 +11,7 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import FormulaireContact from "./FormulaireContact";
 import Logo from "../assets/logo.svg"
+import { Layers2 ,User, Inbox} from 'lucide-react';
 
 const variants = {
   open: { opacity: 1, y: '90vh',x:'-20px' },
@@ -36,17 +37,17 @@ const header = () => {
             <Link to="/projets" className="flex items-center gap-2 rounded-full py-2 border px-5 bg-sky-950/0 border-sky-900/0 hover:bg-sky-950 hover:border-sky-900 duration-300 ease-in-out">
               {" "}
               <span className="hidden sm:inline text-white">Projets</span>{" "}
-              <img src={ProjectIcon} alt="" />
+              <Layers2 className="text-white w-[15px]" />
   </Link>
             <Link to="/About" className="flex items-center gap-2 rounded-full py-2 border px-5 bg-sky-950/0 border-sky-900/0 hover:bg-sky-950 hover:border-sky-900 duration-300 ease-in-out">
               {" "}
               <span className="hidden sm:inline text-white">About</span>{" "}
-              <img src={AboutIcon} alt="" />
+              <User className="text-white w-[15px]" />
             </Link>
             <Link to="/Contact" className="flex items-center gap-2 rounded-full py-2 border px-5 bg-sky-950/0 border-sky-900/0 hover:bg-sky-950 hover:border-sky-900 duration-300 ease-in-out">
               {" "}
               <span className="hidden sm:inline text-white">Contact</span>{" "}
-              <img src={ContactIcon} alt="" />
+              <Inbox className="text-white w-[15px]" />
             </Link>
             
             

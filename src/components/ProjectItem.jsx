@@ -36,7 +36,7 @@ const ProjectItem = ({ title, image,description,stack,lienProject,id }) => {
           
           <div className='flex md:justify-end gap-5'>
             <Link to={lienProject} target='_blank' className="flex items-center gap-2 rounded-full py-2 bg-gradient-to-t from-cyan-50 to-cyan-100 border-cyan-200 hover:border px-5 border border-slate-900 hover:bg-sky-950 hover:border-sky-900 duration-300 ease-in-out mt-4 inline">
-                <span className="text-slate-900">Voir le site</span>
+                <span className="text-slate-900">Site</span>
                 <SquareArrowOutUpRight className='text-zinc-900 h-[15px]' />
                 
               </Link>

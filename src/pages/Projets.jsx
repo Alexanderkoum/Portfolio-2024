@@ -16,7 +16,7 @@ const Projets = () => {
         delay: 0.5,
         ease: [0, 0.71, 0.2, 1.01],
       }}>
-      <h1 className="text-6xl font-bold  decoration-sky-500 underline-offset-8 mb-16">Projets</h1>
+      <h1 className="text-6xl font-bold  decoration-sky-500 underline-offset-8 mb-16">Projets récents</h1>
       <ProjectList/>
 
       
