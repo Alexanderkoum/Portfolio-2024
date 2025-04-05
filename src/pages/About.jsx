@@ -7,11 +7,12 @@ import AnimProfile from "../assets/room-coding.png";
 import Experience from "../components/Experience";
 import experienceData from "../assets/Data/experienceData";
 import EducationData from "../assets/Data/educationData";
+import Spline from "@splinetool/react-spline";
 
 const About = () => {
   return (
     <motion.div
-      className="max-w-4xl md:pt-36"
+      className="max-w-4xl pt-36 px-4 md:px-0"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
@@ -21,9 +22,9 @@ const About = () => {
       }}
     >
       <h1 className="text-6xl font-bold  decoration-sky-500 underline-offset-8 mb-16">Plus sur moi...</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div>
-          <div className="my-9 p-9 border-none rounded-xl bg-slate-900">
+      <div className="md:flex items-start gap-4">
+        <div className="w-full md:w-1/2 ">
+          <div className="my-9 p-9 border-none rounded-xl bg-slate-900 h-[300px]">
             <h2 className="text-2xl font-bold underline decoration-sky-500 underline-offset-8 mb-5">
               Resume
             </h2>
@@ -32,9 +33,13 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div>
-          <div className="my-9 p-9 border-none rounded-xl bg-slate-900 flex items-center justify-center">
-          <img src={AnimProfile} alt="3d profile" className="h-[12.3rem]" />
+        
+        <div className="w-full md:w-1/2">
+          <div className="my-9 border-none rounded-xl bg-slate-900 flex items-center justify-center h-[300px]">
+          {/*<img src={AnimProfile} alt="3d profile" className="h-[12.3rem]" />*/}
+          <Spline
+        scene="https://prod.spline.design/uiXqh4TRhheNpwuM/scene.splinecode" 
+      />
           </div>
           
         </div>

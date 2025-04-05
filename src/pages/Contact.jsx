@@ -39,7 +39,7 @@ const Contact = () => {
 
   return (
     <motion.div
-    className={` max-w-36xl relative flex items-center justify-center gap-9 min-h-screen flex-wrap md:flex-nowrap w-[100%] md:w-[1100px] px-5 py-2 bg-hero-pattern bg-contain bg-repeat bg-center bg-opacity-5`}
+    className={` max-w-36xl relative pt-36 px-4 md:px-0 flex items-center justify-center gap-9 min-h-screen flex-wrap md:flex-nowrap w-[100%] md:w-[1100px] px-5 py-2 bg-hero-pattern bg-contain bg-repeat bg-center bg-opacity-5`}
     initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{

@@ -8,7 +8,7 @@ import DataProject from "../assets/Data/projectData";
 const Projets = () => {
   return (
     <motion.div 
-    className="max-w-6xl md:pt-36"
+    className="max-w-6xl pt-36 px-4 md:px-0"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
