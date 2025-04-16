@@ -46,7 +46,7 @@ function App() {
     <motion.div 
     /* */
     
-    className={`bg-gradient-to-r from-slate-950 to-sky-950 dotted scroll-smooth`}>
+    className={`bg-white dotted scroll-smooth`}>
       
 <svg className="pointer-events-none fixed isolate z-50 opacity-70 mix-blend-soft-light w-screen h-screen">
   <filter id='noiseFilter'>
@@ -63,7 +63,7 @@ function App() {
       <Header />
       <div 
       
-      className="bg-slate-950/65 min-h-screen dotted flex flex-col items-center justify-start pb-36 md:pb-36 md:px-0 md:py-0 ">
+      className="bg-white min-h-screen dotted flex flex-col items-center justify-start pb-0 md:pb-0 md:px-0 md:py-0 ">
         <Routes>
           <Route index element={<Home />} />
           <Route path="/home" element={<Home />} />
@@ -74,11 +74,11 @@ function App() {
           <Route path="/projets/:projectTitle" element={<ProjectDetails />} />
         </Routes>
       </div>
-      <div className="bg-slate-950/65 min-h-screen dotted flex flex-col items-center justify-start  ">
+      <div className=" min-h-screen dotted flex flex-col items-center justify-center md:justify-start  ">
         <Cta/>
       </div>
       
-      <Footer />
+      
       
     </motion.div>
   );
