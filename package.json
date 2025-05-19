@@ -15,6 +15,7 @@
     "@splinetool/react-spline": "^4.0.0",
     "@splinetool/runtime": "^1.9.80",
     "@typeform/embed-react": "^3.10.0",
+    "firebase": "^11.7.1",
     "framer-motion": "^10.17.9",
     "gsap": "^3.12.4",
     "localforage": "^1.10.0",
