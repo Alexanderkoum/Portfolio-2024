@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import SoftwareItem from "../components/SoftwareItem";
 import { Link } from "react-router-dom";
 import AboutIcon from "../assets/arrow-up-right.svg";
+import BlobBackground from "./BlobBackground";
 
 function ProjectDetails() {
     const { projectTitle } = useParams(); // Get project title from URL
@@ -31,9 +32,13 @@ function ProjectDetails() {
   }
 
   return (
-    <div className='max-w-3/12 w-full px-4 md:max-w-6xl pt-36'>
-        <motion.div 
-        className='flex gap-2 flex-wrap justify-between'
+    
+      
+      <div className='bg-slate-950 w-full h-full md:min-h-screen flex items-center justify-start flex-col'>
+      <BlobBackground />
+      <div className="max-w-36xl relative py-36 md:px-0 flex flex-col items-center justify-center gap-9 min-h-screen flex-wrap md:flex-nowrap w-[100%] md:w-[1100px] px-5 md:py-24 bg-hero-pattern bg-contain bg-repeat bg-center bg-opacity-5">
+      <motion.div 
+        className='w-full flex gap-2 flex-wrap justify-between'
         variants = {animateOnAppear}
         initial = "initial"
         whileInView = 'animate'
@@ -131,10 +136,13 @@ function ProjectDetails() {
       </motion.div>
           </motion.div>
         
+      </div>
+    
         
         
       
     </div>
+    
   );
 }
 
