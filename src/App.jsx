@@ -15,6 +15,7 @@ import { motion } from "framer-motion";
 import Cta from "./components/Cta";
 import ProjectDetails from "./components/ProjectDetails";
 import ScrollToTop from "./components/ScrollToTop";
+import Navigation from "./components/Navigation";
 
 
 function App() {
@@ -74,12 +75,9 @@ function App() {
           <Route path="/projets/:projectTitle" element={<ProjectDetails />} />
         </Routes>
       </div>
-      <div className=" min-h-screen dotted flex flex-col items-center justify-center md:justify-start  ">
-        <Cta/>
-      </div>
+      <Footer />
       
-      
-      
+      <Navigation />
     </motion.div>
   );
 }

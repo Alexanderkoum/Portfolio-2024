@@ -2,7 +2,14 @@
   margin: 0 auto;
   width:100%;
 }
+.wrapper{
+  width:980px;
+  max-width:980px;
+}
 
+p{
+  font-size: 18px;
+}
 .main-bg{
   background-image: url(/my-portfolio/src/assets/doted-bg.png);
   background-position: center center;
@@ -14,6 +21,38 @@
   font-weight: 400;
   font-style: normal;
 }
+
+.gooey-container {
+  position: relative;
+}
+
+.blob {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #6c5ce7;
+  border-radius: 50%;
+}
+
+.blob2 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #6c5ce7;
+  border-radius: 0%;
+}
+
+.limit {
+  position: absolute;
+  width: 150px;
+  height: 100px;
+  background: black;
+  top:190%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0%;
+}
+
 
 .gradientPink{
   /*background-image: url(./assets/blue-pink-gradient.jpg);

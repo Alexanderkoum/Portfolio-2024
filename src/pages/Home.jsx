@@ -1,161 +1,200 @@
 import React from "react";
-import SoftwareItem from "../components/SoftwareItem";
-import Profile from "../assets/imageprofile.png";
-import { motion, progress } from "framer-motion";
-import ProfileHeading from "../components/ProfileHeading";
-import ProjectItem from "../components/ProjectItem";
-import DataProject from "../assets/Data/projectData";
-import ProjectList from "../components/ProjectList";
-import { useTransform, useScroll } from "framer-motion";
-import { useRef } from "react";
-import Skills from "../components/Skills";
-import Spline from "@splinetool/react-spline";
-import BlobBackground from "../components/BlobBackground";
-import Experience from "../components/Experience";
-import experienceData from "../assets/Data/experienceData";
-import EducationData from "../assets/Data/educationData";
-
+import Button from "../components/Button";
+import { Link } from "react-router-dom";
+import { MoveRight, CornerRightDown, Fullscreen, Download } from "lucide-react";
+import GooeyBlob from "../components/GooeyBlob";
+import img3d from "../assets/room-coding.png";
+import Stickers from "../components/Stickers";
 const Home = () => {
-  const targetRef = (useRef < HTMLDivElement) | (null > null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-  });
-
-  const x = useTransform(scrollYProgress, [0.15, 1], ["37%", "-75%"]);
-  /*const {scrollYProgress} = useScroll();
-
-  const translateY = useTransform(scrollYProgress, [0,.1,.3,1],["-0vh", "-5vh","-5vh","200vh"])
-  const scale = useTransform(scrollYProgress, [.3,1],[.8, 1])
-  const opacity = useTransform(scrollYProgress, [.3,.35],[1, 0])
-  
-  // background backup
-
-  bg-hero-patten bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-950 from-[10%] via-slate-900 via-[60%] to-slate-900 to-[70%] bg-[length:380%] bg-repeat bg-center bg-opacity-
-  */
-
   return (
-    <>
-      <BlobBackground />
-      <motion.div
-        className="z-10 w-full min-h-screen px-5 md:px-0 pt-36 md:pt-0  flex items-center justify-end z-2"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          duration: 0.8,
-          delay: 0.5,
-          ease: [0, 0.71, 0.2, 1.01],
-        }}
-      >
-        <ProfileHeading />
-      </motion.div>
-      <div className="bg-slate-950 w-full px-5">
-        <Skills />
+    <div className="pt text-black text-center">
+      <div className="wrapper h-screen flex flex-col items-center justify-center gap-12">
+        <h1 className="bayon-regular tracking-tighter text-5xl md:text-[6rem] md:leading-[4.7rem] mb-3 font-bold text-center w-[80%]">
+          Designer web centré{" "}
+          <span className="hover:text-[6rem] duration-300" aria-hidden>
+            🤙
+          </span>{" "}
+          humain basé à Montréal
+        </h1>
+        <p>
+          Je suis un développeur front-end avec 5 ans d'expérience dans la
+          conception d'interfaces web modernes et intuitives pour une expérience
+          utilisateur optimale à l'aide de HTML, CSS, JavaScript, React,
+          WordPress et plus.
+        </p>
+        <div className="flex gap-4">
+          <Link className="bg-sky-800 rounded-full py-3 px-6 flex gap-2 items-center justify-center hover:ring-1 ring-sky-950/10 durantion-300">
+            <span className="text-sky-300 font-bold">Explorer projets</span>
+            <MoveRight className="text-sky-300 h-[15px]" />
+          </Link>
+          <Link className="text-sky-800 rounded-full py-3 px-6 flex gap-2 items-center justify-center hover:ring-1 ring-sky-950/10 durantion-300">
+            <span className=" font-bold">scroller</span>
+            <CornerRightDown className=" h-[15px]" />
+          </Link>
+        </div>
       </div>
-
-      <motion.div
-        ref={{ targetRef }}
-        className="relative h-[690vh] md:h-[690vh] w-full rounded-b-4xl z-2 "
-      >
-        <motion.div className=" bg-slate-950 sticky top-0 overflow-hidden w-full min-h-screen flex items-center justify-start md:justify-center flex-col  py-36 md:py-24 rounded-b-[20px]">
-          {/*<motion.div
-
-                    className="pb-12  flex flex-col items-center justify-center text-center max-w-6xl"
-                    initial={{ opacity: 0, y: 100 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{
-                      duration: 0.8,
-                      delay: .5,
-                      ease: [0, 0.71, 0.2, 1.01],
-                    }}
-                  >
-                    <h2 className="bayon-regular text-5xl md:text-8xl tracking-tighter font-bold text-center bg-gradient-to-t from-cyan-50 to-cyan-900 bg-clip-text text-transparent">Projets selectionnees<sup className='bg-gradient-to-t from-white-500 to-slate-900 bg-clip-text text-transparent text-md leading-6 p-2 '>4</sup></h2>
-                    
-                  </motion.div>*/}
-
-          <motion.div style={{ x }} className="flex gap-2 md:gap-12 ">
-            <ProjectList />
-          </motion.div>
-        </motion.div>
-      </motion.div>
-
-      <div className="relative h-full md:h-[203vh] w-[100vw]  md:py-32 tracking-tighter inline-block md:flex items-start justify-between gap-12 px-12 md:px-48  bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/20  to-white">
-        <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.8,
-            delay: 0.5,
-            ease: [0, 0.71, 0.2, 1.01],
-          }}
-          viewport={{ amount: 0.99, once: true }}
-          className="md:sticky top-32 h-fit flex items-stretch justify-center gap-24 md:w-1/2"
-        >
-          <div className="w-full md:w-full">
-            <div className="flex gap-5">
-              <div className=" border rounded-xl bg-hero-pattern flex items-center justify-center h-[300px] w-[300px]">
-                {/*<img src={AnimProfile} alt="3d profile" className="h-[12.3rem]" />*/}
-                <Spline scene="https://prod.spline.design/uiXqh4TRhheNpwuM/scene.splinecode" />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:gap-4">
-              <div className="my-9 p-9 border-none rounded-xl bg-slate-50">
-                <p className="text-[4rem] font-bold text-transparent bg-gradient-to-t from-stone-50 to-cyan-900 bg-clip-text">
-                  4+
-                </p>
-                <p className="text-slate-800">Annees d'experience</p>
-              </div>
-              <div className="md:my-9 p-9 border-none rounded-xl bg-slate-50">
-                <p className="text-[4rem] font-bold text-transparent bg-gradient-to-t from-stone-50 to-cyan-900 bg-clip-text">
-                  100+
-                </p>
-                <p className="text-slate-800">Site web realise*</p>
-              </div>
+      <Stickers />
+      <section>
+        <div className="wrapper py-48 grid grid-cols-2 gap-5 overflow-visible ">
+          <div className="sticky top-[15vw] h-fit">
+            <h2 className=" bayon-regular tracking-tighter text-5xl md:text-[4rem] md:leading-[3.7rem] mb-3 font-bold text-left">
+              Projets sélectionnés.
+            </h2>
+            <div className="title-wrapper text-left ">
+              <p className="bayon-regular tracking-tighter text-5xl md:text-[4rem] md:leading-[3.7rem] font-bold text-sky-600">
+                {" "}
+                Owner Financing
+              </p>
+              <p className="bayon-regular tracking-tighter text-5xl md:text-[4rem] md:leading-[3.7rem] font-bold text-gray-400 opacity-10">
+                {" "}
+                mbde
+              </p>
+              <p className="bayon-regular tracking-tighter text-5xl md:text-[4rem] md:leading-[3.7rem] font-bold text-gray-400 opacity-10">
+                {" "}
+                Andromeda
+              </p>
             </div>
           </div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.8,
-            delay: 0.5,
-            ease: [0, 0.71, 0.2, 1.01],
-          }}
-          viewport={{ amount: 0.25, once: true }}
-          className="md:w-1/2 "
-        >
-          <div className="my-9 p-9 border-none rounded-xl bg-slate-50">
-            <h2 className="text-2xl text-slate-950 font-bold underline decoration-sky-500 underline-offset-8 mb-5">
-              Experience
-            </h2>
-            {experienceData.map((data, index) => (
-              <Experience
-                periode={data.periode}
-                role={data.role}
-                company={data.company}
-                jobtasks={data.jobtasks.map((task, taskIndex) => (
-                  <li key={taskIndex}>{task}</li>
-                ))}
+          <div>
+            <div className=" text-left bg-gray-300/10 backdrop-blur-lg p-5 rounded-xl mb-12">
+              <div className="relative">
+                <img
+                  src="./src/assets/ownerFinancing.png"
+                  alt="ownerfinacing image"
+                  className="project-img project-img-1 rounded-xl"
+                />
+                <Link className=" absolute top-2 right-2 p-2 rounded-full text-md text-white/50 bg-white/10 hover:bg-white/100 hover:text-black backdrop-blur-lg flex items-center justify-center duration-300">
+                  <Fullscreen className="w-4 h-4" />
+                </Link>
+              </div>
+
+              <p className="text-gray-400 font-bold my-5">
+                Owner financing est une plateforme permettant de fourninr au
+                proprietaire de logement un option pour leur acheteurs, en leur
+                permettant de payer leurs mise de fond en plusieurs mensualite .
+                sur ce projet consistant a la landing page / waiting list je fus
+                le designer UI/UX et le Developpeur Web
+              </p>
+            </div>
+
+            <div className=" text-left">
+              <img
+                src="./src/assets/ownerFinancing.png"
+                alt="ownerfinacing image"
+                className="project-img project-img-1 rounded-xl"
               />
-            ))}
-          </div>
-          <div className="my-9 p-9 border-none rounded-xl bg-slate-50">
-            <h2 className="text-2xl text-slate-950 font-bold underline decoration-sky-500 underline-offset-8 mb-5">
-              Education
-            </h2>
-            {EducationData.map((data, index) => (
-              <Experience
-                periode={data.periode}
-                role={data.degree}
-                company={data.school}
-                jobtasks={data.location}
+              <p className="text-gray-400 font-bold my-5">
+                Owner financing est une plateforme permettant de fourninr au
+                proprietaire de logement un option pour leur acheteurs, en leur
+                permettant de payer leurs mise de fond en plusieurs mensualite .
+                sur ce projet consistant a la landing page / waiting list je fus
+                le designer UI/UX et le Developpeur Web
+              </p>
+            </div>
+
+            <div className=" text-left">
+              <img
+                src="./src/assets/ownerFinancing.png"
+                alt="ownerfinacing image"
+                className="project-img project-img-1 rounded-xl"
               />
-            ))}
+              <p className="text-gray-400 font-bold my-5">
+                Owner financing est une plateforme permettant de fourninr au
+                proprietaire de logement un option pour leur acheteurs, en leur
+                permettant de payer leurs mise de fond en plusieurs mensualite .
+                sur ce projet consistant a la landing page / waiting list je fus
+                le designer UI/UX et le Developpeur Web
+              </p>
+            </div>
           </div>
-        </motion.div>
-      </div>
-    </>
+        </div>
+      </section>
+      <section>
+        <div className="wrapper h-[120vw]">
+          <p className="text-left bayon-regular tracking-tighter text-[3rem] md:leading-[3.7rem] font-bold">
+          Je suis un développeur front-end 👨🏾‍💻 avec 5 ans d'expérience dans la
+          conception d'interfaces web modernes et intuitives pour une expérience
+          utilisateur optimale 😤 à l'aide de HTML, CSS, JavaScript, React,
+          WordPress et plus.
+          </p>
+          <div className="sticky top-[-4vw] grid grid-cols-3 gap-5 py-48">
+            <div className="bg-slate-50 py-8 px-7 rounded-xl ">
+              <h2 className=" bayon-regular tracking-tighter text-5xl md:text-[2rem] md:leading-[3.7rem] mb-3 font-bold text-left">
+                Éducation
+              </h2>
+              <div className="text-left bg-white p-5 rounded-xl mb-3">
+                <p className="font-bold">
+                  Certificat en informatique appliquée
+                </p>
+                <div className="flex items-center justify-between">
+                  <span>Universite de Montreal</span>
+                  <span>2024</span>
+                </div>
+              </div>
+              <div className="text-left bg-white p-5 rounded-xl mb-3">
+                <p className="font-bold">
+                  Certificat en informatique appliquée
+                </p>
+                <div className="flex items-center justify-between">
+                  <span>Universite de Montreal</span>
+                  <span>2024</span>
+                </div>
+              </div>
+              <div className="text-left bg-white p-5 rounded-xl mb-3">
+                <p className="font-bold">
+                  Certificat en informatique appliquée
+                </p>
+                <div className="flex items-center justify-between">
+                  <span>Universite de Montreal</span>
+                  <span>2024</span>
+                </div>
+              </div>
+            </div>
+            <div className="bg-slate-50 py-8 px-7 rounded-xl ">
+              <h2 className=" bayon-regular tracking-tighter text-5xl md:text-[2rem] md:leading-[3.7rem] mb-3 font-bold text-left">
+                Éducation
+              </h2>
+              <div className="text-left bg-white p-5 rounded-xl mb-3">
+                <p className="font-bold">
+                  Certificat en informatique appliquée
+                </p>
+                <div className="flex items-center justify-between">
+                  <span>Universite de Montreal</span>
+                  <span>2024</span>
+                </div>
+              </div>
+              <div className="text-left bg-white p-5 rounded-xl mb-3">
+                <p className="font-bold">
+                  Certificat en informatique appliquée
+                </p>
+                <div className="flex items-center justify-between">
+                  <span>Universite de Montreal</span>
+                  <span>2024</span>
+                </div>
+              </div>
+              <div className="text-left bg-white p-5 rounded-xl mb-3">
+                <p className="font-bold">
+                  Certificat en informatique appliquée
+                </p>
+                <div className="flex items-center justify-between">
+                  <span>Universite de Montreal</span>
+                  <span>2024</span>
+                </div>
+              </div>
+            </div>
+            <div className="h-full relative bg-slate-100 rounded-xl p-5">
+              <div className="h-full bg-[url({img3d})] mb-5 rounded-xl">
+                <img src={img3d} alt="" />
+              </div>
+              <Link className="absolute bottom-5 left-1/2 -translate-x-1/2 w-[90%] flex items-center justify-between p-5 bg-slate-50 rounded-xl text-sky-600">
+                <span> Télécharger cv</span>
+                <Download />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 

@@ -10,8 +10,8 @@ import AboutIcon from "../assets/circle-user-solid.svg";
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import FormulaireContact from "./FormulaireContact";
-import Logo from "../assets/logo.svg";
-import { Layers2, User, Inbox } from "lucide-react";
+import Logo from "../assets/imageprofile.png";
+import { Cog } from "lucide-react";
 
 const variants = {
   open: { opacity: 1, y: "90vh", x: "-20px" },
@@ -22,45 +22,23 @@ const header = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <div className="fixed top-0 py-6  px-4 md:px-8 w-screen flex justify-between items-center backdrop-blur-xl sm:backdrop-blur-0 z-[99999] mix-blend-exclusion ">
+      <div className="text-stone-900 wrapper fixed top-0 left-1/2 -translate-x-1/2 py-6  px-4 md:px-0 w-screen flex justify-between items-center  bg-white/10 backdrop-blur-md">
         <div className="flex flex-col space-y-2  ">
           <Link to="/" className="">
             <span>
               <img
                 src={Logo}
                 alt="Logo Alexander"
-                className="w-[30px] grayscale"
+                className="w-[50px] rounded-full ring ring-slate-50"
               />
             </span>
           </Link>
         </div>
-        <div className="flex space-x-2">
-          <div className="flex space-x-2 rounded-full py-2 border px-2 bg-gradient-to-t from-slate-50/20 to-slate-950/20 border-slate-50/20 backdrop-blur-xl grayscale">
-            <Link
-              to="/projets"
-              className="flex items-center gap-2 rounded-full py-2 border px-5 bg-sky-950/0 border-sky-900/0 hover:bg-sky-950 hover:border-sky-900 duration-300 ease-in-out"
-            >
-              {" "}
-              <span className="hidden sm:inline text-white">Projets</span>{" "}
-              <Layers2 className="text-white w-[15px]" />
-            </Link>
-            {/*<Link
-              to="/About"
-              className="flex items-center gap-2 rounded-full py-2 border px-5 bg-sky-950/0 border-sky-900/0 hover:bg-sky-950 hover:border-sky-900 duration-300 ease-in-out"
-            >
-              {" "}
-              <span className="hidden sm:inline text-white">About</span>{" "}
-              <User className="text-white w-[15px]" />
-            </Link>*/}
-            <Link
-              to="/Contact"
-              className="flex items-center gap-2 rounded-full py-2 border px-5 bg-sky-950/0 border-sky-900/0 hover:bg-sky-950 hover:border-sky-900 duration-300 ease-in-out"
-            >
-              {" "}
-              <span className="hidden sm:inline text-white">Contact</span>{" "}
-              <Inbox className="text-white w-[15px]" />
-            </Link>
-          </div>
+        <div>
+        <Link className="border border-sky-300 rounded-full py-2 px-2 flex gap-2 items-center justify-center hover:ring-1 ring-sky-950/10 durantion-300 text-sm">
+            <span className="text-sky-800 font-bold">FR</span>
+            <span className="text-sky-800 font-bold bg-sky-300 py-1 px-2 rounded-full">EN</span>
+          </Link>
         </div>
       </div>
     </>
