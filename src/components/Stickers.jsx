@@ -29,6 +29,11 @@ const Stickers = () => {
             ease: "power1.out",
             scale: 1,
         });
+        tls.to(".sticker-item",{
+            opacity:0,
+            duration:.2,
+            ease: "power1.out",
+        });
 
 
         const handleScroll = () => {
@@ -48,7 +53,7 @@ const Stickers = () => {
     
   
   return (
-    <section>
+    <section className=''>
         <div className="wrapper flex h-96 relative ">
         <img src="./src/assets/git-sticker.png" className="sticker-item h-48 absolute bottom-full left-[-20%] scale-[1.5] -rotate-12" aria-hidden/>
         <img src="./src/assets/figma-sticker.png" className="sticker-item h-48 absolute bottom-[90%] left-[15%] scale-[1.5] -rotate-45" aria-hidden/>

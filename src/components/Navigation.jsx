@@ -24,11 +24,11 @@ const Navigation = () => {
   
     tl.fromTo(nav.current, 
       { y: 110,scale:0.4  },
-      { y: 0,scale:1, ease: "power1.out", duration: 0.6 }
+      { y: 0,scale:1, ease: "power1.out", duration: 0.4 }
     );
     tl.fromTo(nav.current, 
         { width: "80px", background:"oklch(13% 0.028 261.692)",filter: "backdrop-blur(0px)" },
-        { width:"100%",background:"oklch(96.8% 0.007 247.896)",filter: "backdrop-blur(40px)", ease: "power1.out", duration: 0.6 }
+        { width:"100%",background:"oklch(96.8% 0.007 247.896)",filter: "backdrop-blur(40px)", ease: "power1.out", duration: 0.3 }
       );
     tl.fromTo("menu-list", 
         { display: "none" },

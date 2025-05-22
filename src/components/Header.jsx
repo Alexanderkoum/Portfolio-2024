@@ -21,8 +21,8 @@ const variants = {
 const header = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <>
-      <div className="text-stone-900 wrapper fixed top-0 left-1/2 -translate-x-1/2 py-6  px-4 md:px-0 w-screen flex justify-between items-center  bg-white/10 backdrop-blur-md">
+    <div className="bg-white/70 backdrop-blur-md w-screen fixed top-0 left-0 z-50">
+      <div className="text-stone-900 wrapper  mx-auto py-6  px-4 md:px-0 w-screen flex justify-between items-center  ">
         <div className="flex flex-col space-y-2  ">
           <Link to="/" className="">
             <span>
@@ -41,7 +41,7 @@ const header = () => {
           </Link>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
